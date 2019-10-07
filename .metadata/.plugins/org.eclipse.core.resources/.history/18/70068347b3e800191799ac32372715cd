@@ -1,0 +1,27 @@
+var app = (()=>{
+	return {
+			init : (ctx)=>{
+				empService.login(cxt);
+				empService.join(ctx);
+			
+									
+					
+			
+			}
+	}
+	
+})();
+
+var emp = (()=>{
+	var _empno, _ename, _job, _mgr, _hiredate, _sal, _comm, _deptno;
+	var setEmpno = (empno)=>{this._empno = empno;}
+	var setEname = (ename)=>{this._ename = ename;}
+	var getEmpno = ()=>{this._empno = empno;}
+	var getEname = ()=>{this._ename = ename;}
+	return{
+		setEmpno : setEmpno,
+		setEname : setEname,
+		getEmpno : getEmpno,
+		getEname : getEname
+	};
+}

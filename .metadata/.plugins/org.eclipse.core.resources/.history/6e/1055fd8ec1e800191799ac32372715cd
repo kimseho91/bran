@@ -1,0 +1,7 @@
+package com.web.bran.serviceimpls;
+
+import com.web.bran.services.EmpService;
+
+public class EmpServiceImpl implements EmpService {
+
+}

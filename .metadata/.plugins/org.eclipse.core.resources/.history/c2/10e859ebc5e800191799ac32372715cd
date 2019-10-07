@@ -1,0 +1,6 @@
+package com.web.bran.factory;
+
+public class DatabaseFactory {
+
+	
+}

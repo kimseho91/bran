@@ -1,0 +1,29 @@
+package com.web.bran.command;
+
+public class CreatCommand extends Command{
+
+	public LoginCommand(HttpServletRequest request) {
+        setRequest(request);
+        setDomain(request.getServletPath()
+                .substring(1,request.getServletPath().indexOf(".")));
+        setFolder(request.getParameter("folder"));
+        setAction(request.getParameter("action"));
+        execute();
+    }
+    @Override
+    public void execute() {
+        String empNo = request.getParameter("empNo");
+        String eName = request.getParameter("eName");
+        String deptNo = request.getParameter("deptNo")
+        EmpBean e = new EmpBean();
+        e.setPlayerId(playerId);
+        e.setSolar(solar);
+        e = EmpServiceImpl.getInstance().login(e);      
+        String a = (e.getEmpNo()==null) ? "login" : request.getParameter("page");
+        String b = (e.getEmpNo()==null) ? "facade" : request.getParameter("folder");
+        request.setAttribute("page", a);
+        request.setAttribute("folder",b);
+        super.execute();
+    }
+
+}

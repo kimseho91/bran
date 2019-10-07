@@ -1,0 +1,32 @@
+package com.web.bran.command;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.web.bran.domains.EmpBean;
+
+public class CreateCommand extends Command{
+	public CreateCommand(HttpServletRequest request) {
+		setRequest(request);
+		setAction(action);
+		setDomain(domain);
+		super.execute();
+	}
+	@Override
+	public void execute() {
+		EmpBean param = new EmpBean();
+		param.setEmpNo(request.getParameter("empno"));
+		param.setEName(request.getParameter("ename"));
+		param.setJob(request.getParameter("job"));
+		param.setMgr(request.getParameter("mgr"));
+		param.setHireDate(request.getParameter("hiredate"));
+		param.setSal(request.getParameter("sal"));
+		param.setComm(request.getParameter("comm"));
+		param.setDeptNo(request.getParameter("deptno"));
+		if(EmpServiceImpl.getInstance().join(param)) {
+			System.out.println("회원가입 성공");
+		}else{
+			System.out.println("가입실패");
+		};
+	}
+	
+}

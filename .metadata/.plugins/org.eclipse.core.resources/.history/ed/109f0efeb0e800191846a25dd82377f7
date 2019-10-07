@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<jsp:include page="..common/head.jsp"/>
+
+<div></div>
+<div>
+	<img id="bran_intro" src="%{img}/soccer.jpg" alt="" />
+</div>
+<div></div>
+
+<div></div>
+<div>
+		<form id="login_form">
+		<table>
+			<tr>
+				<td>
+				부서명: 
+				</td>
+				<td>
+				
+				<input id="userdept" class="input_text" type="text" name="dname" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				사용자ID:
+				</td>
+				<td>
+				<input id="userid" class="input_text" type="text" name="enpno" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				비밀번호:
+				</td>
+				<td>
+				<input id="userpw" class="input_text" type="text" name="ename"  />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<input id="login_btn" type="button" value="로그인" />
+				</td>
+				<td>
+				
+					<a id="a_join" href="#">회원가입</a>
+				
+				</td>
+			</tr>
+		</table>
+		</form>
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+

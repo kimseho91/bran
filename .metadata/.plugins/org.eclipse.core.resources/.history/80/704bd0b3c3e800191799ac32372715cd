@@ -1,0 +1,29 @@
+package com.web.bran.daoimpls;
+
+import com.web.bran.daos.EmpDao;
+import com.web.bran.domains.EmpBean;
+import com.web.bran.serviceimpls.EmpServiceImpl;
+
+public class EmpDaoImpl implements EmpDao {
+
+	private static EmpDaoImpl instance = new EmpDaoImpl();
+	public static EmpDaoImpl getInstance() {return instance;}
+	private EmpDaoImpl() {}
+	
+		
+	@Override
+	public boolean insertEmpBean(EmpBean param) {
+		boolean flag = false;
+		
+		
+		
+		return flag;
+	}
+
+	@Override
+	public EmpBean selectbyLoginData(EmpBean param) {
+		return null;
+	}
+	
+
+}

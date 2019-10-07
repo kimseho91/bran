@@ -1,0 +1,26 @@
+package com.web.bran.serviceimpls;
+
+import com.web.bran.domains.EmpBean;
+import com.web.bran.services.EmpService;
+
+import sun.security.jca.GetInstance;
+
+public class EmpServiceImpl implements EmpService {
+	private static EmpServiceImpl instance = new EmpServiceImpl();
+	public static EmpServiceImpl getInstance() {return instance;}
+	private EmpServiceImpl() {}
+	
+	
+
+	@Override
+	public EmpBean login(EmpBean param) {
+		
+	return null;
+	}
+
+	@Override
+	public EmpBean join(EmpBean param) {
+		return null;
+	}
+
+}

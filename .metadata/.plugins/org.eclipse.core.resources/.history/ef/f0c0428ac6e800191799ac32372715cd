@@ -1,0 +1,8 @@
+package com.web.bran.factory;
+
+import com.sun.corba.se.pept.transport.Connection;
+
+public interface Database {
+	public Connection getConnection();
+
+}

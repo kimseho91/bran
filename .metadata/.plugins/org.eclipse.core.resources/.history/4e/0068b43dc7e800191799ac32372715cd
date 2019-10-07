@@ -1,0 +1,47 @@
+package com.web.bran.daoimpls;
+
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.web.bran.daos.EmpDao;
+import com.web.bran.domains.EmpBean;
+import com.web.bran.factory.DatabaseFactory;
+import com.web.bran.pool.Constants;
+
+public class EmpDaoImpl implements EmpDao {
+
+	private static EmpDaoImpl instance = new EmpDaoImpl();
+	public static EmpDaoImpl getInstance() {return instance;}
+	private EmpDaoImpl() {}
+	
+		
+	@Override
+	public boolean insertEmpBean(EmpBean param) {
+		boolean flag = false;
+		
+		String sql = "INSERT INTO EMP(EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)\r\n" + 
+				"VALUES(?, ?,?,?,?,?,?,?)";
+		try {
+			PreparedStatement stmt = DatabaseFactory
+					.createDatabase(Constants.VENDOR)
+					.getConnection()
+					.prepareStatement(sql);
+			stmt.setString(1, param.getEmpno());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return flag;
+	}
+	
+
+	@Override
+	public EmpBean selectbyLoginData(EmpBean param) {
+		return null;
+	}
+	
+
+}

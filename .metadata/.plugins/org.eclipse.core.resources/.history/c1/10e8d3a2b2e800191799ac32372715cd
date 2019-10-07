@@ -1,0 +1,12 @@
+var app = (()=>{
+	return {
+			init : (ctx)=>{
+				empService.login(cxt);
+				empService.join(ctx);
+			
+									
+					
+			
+			}
+	}
+})();

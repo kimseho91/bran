@@ -1,0 +1,5 @@
+package com.web.bran.services;
+
+public interface EmpService {
+
+}

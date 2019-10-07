@@ -1,0 +1,8 @@
+package com.web.bran.domains;
+
+import lombok.Data;
+
+@Data
+public class DeptBean {
+	private String deptno, dname, loc;   
+}

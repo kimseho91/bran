@@ -1,0 +1,11 @@
+var app = (()=>{
+	return {
+			init : (ctx)=>{
+				empService.login();
+				$('#login_btn').click(()=>{
+									
+					
+				});
+			}
+	}
+})();

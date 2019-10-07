@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<img src="<%=request.getContextPath()%>/resources/img/loading.gif" alt="" />
+<script>
+location.assign('<%=request.getContextPath()%>/facade.do');
+</script>
+
+
